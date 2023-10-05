@@ -1,0 +1,55 @@
+baseURL = 'https://eddiequinn.xyz/'
+theme = 'risotto'
+title = 'eddiequinn.xyz'
+author = 'eddiequinn'
+copyright = 'Any and all opinions listed here are my own and are not representative of any of my employers, past, future, and/or present'
+languageCode = 'en-us'
+
+## Theme setup
+[params.theme]
+palette = "base16-dark"
+
+## Sidebar setup
+[params.about]
+title = "whoami"
+description = "A general purpose blog for me to braindump anything I might be thinking about. Please dont hesistate to reach out if you have any questions"
+
+[[params.socialLinks]]
+icon = "fa-brands fa-github"
+title = "GitHub"
+url = "https://github.com/eddiebquinn/"
+
+[[params.socialLinks]]
+icon = "fa-solid fa-envelope"
+title = "Email"
+url = "mailto:info@pranonym.com"
+
+[[params.socialLinks]]
+icon = "fa-brands fa-linkedin"
+title = "LinkedIn"
+url = "https://www.linkedin.com/in/edward-b-quinn/"
+
+[[params.socialLinks]]
+icon = "fa-solid fa-square-rss"
+title = "RSS"
+url = "https://eddiequinn.xyz/index.xml"
+
+## Top-navi setup
+[menu]
+
+    [[menu.main]]
+        identifier = "posts"
+        name = "posts"
+        url = "/posts/"
+        weight = 10
+    
+    [[menu.main]]
+        identifier = "nts"
+        name = "nts"
+        url = "/nts/"
+        weight = 11
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
