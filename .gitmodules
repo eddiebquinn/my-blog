@@ -6,4 +6,4 @@
 	url = git@github.com:eddiebquinn/blog-posts.git
 [submodule "public"]
 	path = public
-	url = https://github.com/eddiebquinn/eddiebquinn.github.io
+	url = git@github.com:eddiebquinn/eddiebquinn.github.io.git
