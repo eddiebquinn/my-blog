@@ -48,6 +48,12 @@ url = "https://eddiequinn.xyz/index.xml"
         name = "nts"
         url = "/nts/"
         weight = 11
+    
+    [[menu.main]]
+        identifier = "build-logs"
+        name = "build-logs"
+        url = "/build-logs/"
+        weight = 12  
 
 [taxonomies]
 category = "categories"
