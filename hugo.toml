@@ -5,6 +5,26 @@ author = 'eddiequinn'
 copyright = 'Any and all opinions listed here are my own and are not representative of any of my employers, past, future, and/or present'
 languageCode = 'en-us'
 
+## Signing posts
+[outputFormats]
+    [outputFormats.standardFormat]
+        name = "standard-format"
+        baseName = "index"
+        isPlainText = false
+        mediaType = "text/html"
+        path = ""
+        permalinkable = true
+        weight = 1
+
+    [outputFormats.sigFormat]
+        name = "sig-format"
+        baseName = "index"
+        isPlainText = true
+        mediaType = "text/html"
+        path = "sigs"
+        permalinkable = true
+        weight = 2
+
 ## Theme setup
 [params.theme]
 palette = "base16-dark"
