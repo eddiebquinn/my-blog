@@ -14,8 +14,6 @@ class Gpg_client:
         self.gpg = gnupg.GPG()
     
     def extract_content(self, signed_message:str):
-        verification = self.gpg.verify(signed_message)
-
         ## Strip out begining
         content_start_index = signed_message.find('\n\n')
         if content_start_index != -1:
