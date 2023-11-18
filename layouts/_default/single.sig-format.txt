@@ -1,0 +1,7 @@
+{{- $rawContent := .RawContent -}}
+{{- range .Site.Data.article_txt_replace.args -}}
+  {{- if not .skip -}}
+    {{- $rawContent = $rawContent | replaceRE .pattern .replacement -}}
+  {{- end -}}
+{{- end -}}
+{{ $rawContent }}
