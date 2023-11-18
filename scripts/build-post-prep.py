@@ -31,7 +31,7 @@ class Signed_Post:
         yaml_string = seperated_content[0]
         yaml_documents = yaml_string.split("---\n")
         yaml_data = yaml.safe_load(yaml_documents[1])
-        yaml_data['outputs'] = 'standardFormat'
+        yaml_data['outputs'] = 'standard-format'
         modified_yaml_str = "---\n" + yaml.dump(yaml_data) + "---\n"
 
         # Strip out begining
