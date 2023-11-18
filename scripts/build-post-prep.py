@@ -105,14 +105,18 @@ class Directory_Strcture:
 
 
 def main(content_dir:str, sigs_dir:str):
-    directory_strcture = Directory_Strcture(directory = content_dir, whitelist= [f"{sigs_dir}", ".git", ".gitignore"])
-    directory_strcture.purge_nonsig()
-    directory_strcture.copy_files()
-    directory_strcture.bulk_modify_post()
-
+    script_directory = os.path.dirname(__file__)
+    parent_directory = os.path.abspath(os.path.join(script_directory, os.pardir))  # Navigate up one level
+    content_directory = os.path.join(parent_directory, content_dir)
+    directory_structure = Directory_Strcture(directory=content_directory, whitelist=[f"{sigs_dir}", ".git", ".gitignore"])
+    directory_structure.purge_nonsig()
+    directory_structure.copy_files()
+    directory_structure.bulk_modify_post()
 
 if __name__ == "__main__":
+    # Define the relative paths to the content and sigs directories
     CONTENT_DIR = "content"
     SIGS_DIR = "sigs"
 
-    main(content_dir = CONTENT_DIR, sigs_dir = SIGS_DIR)
+    # Call the main function with the relative paths
+    main(content_dir=CONTENT_DIR, sigs_dir=SIGS_DIR)
