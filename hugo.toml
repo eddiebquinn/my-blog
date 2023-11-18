@@ -21,7 +21,7 @@ languageCode = 'en-us'
         baseName = "index"
         isPlainText = true
         mediaType = "text/plain"
-        path = "sigs"
+        path = ""
         permalinkable = true
         weight = 2
 
