@@ -23,7 +23,10 @@ class Signed_Post:
 
         return (yaml_content, content_after_yaml)
 
-    def modify_post(self, overwrite:bool = False):
+    def replace_dash(self, content: str) -> str:
+        return content.replace("- -", "-")
+
+    def modify_post(self, overwrite: bool = False):
         # Seperate out YAML
         seperated_content = self.seperate_yaml(self.content)
 
@@ -34,17 +37,19 @@ class Signed_Post:
         yaml_data['outputs'] = 'standard-format'
         modified_yaml_str = "---\n" + yaml.dump(yaml_data) + "---\n"
 
-        # Strip out begining
+        # Strip out beginning and end
         content_start_index = seperated_content[1].find("\n\n")
         if content_start_index != -1:
-            stripped_content = seperated_content[1][content_start_index +2:]
+            stripped_content = seperated_content[1][content_start_index + 2:]
         
-        # strip out end
         sig_start_index = stripped_content.rfind("-----BEGIN PGP SIGNATURE-----")
         if sig_start_index != -1:
             stripped_content = stripped_content[:sig_start_index]
         
-        # reassemble with yaml
+        # Replace "- -" with "-"
+        stripped_content = self.replace_dash(stripped_content)
+
+        # Reassemble with YAML
         stripped_content = modified_yaml_str + stripped_content
 
         if overwrite:
