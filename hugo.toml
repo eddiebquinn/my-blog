@@ -35,6 +35,11 @@ title = "whoami"
 description = "A general purpose blog for me to braindump anything I might be thinking about. Please dont hesistate to reach out if you have any questions"
 
 [[params.socialLinks]]
+icon = "fa-solid fa-key"
+title = "Public Key"
+url = "https://keybase.io/eddiequinn/pgp_keys.asc?fingerprint=551d835e4f1549e058c53eafbd4a349d47a8179c"
+
+[[params.socialLinks]]
 icon = "fa-brands fa-github"
 title = "GitHub"
 url = "https://github.com/eddiebquinn/"
