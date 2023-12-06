@@ -4,3 +4,6 @@
 [submodule "public"]
 	path = public
 	url = git@github.com:eddiebquinn/eddiebquinn.github.io.git
+[submodule "content"]
+	path = content
+	url = git@github.com:eddiebquinn/blog-posts.git
